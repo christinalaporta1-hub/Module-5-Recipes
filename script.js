@@ -26,3 +26,5 @@ function sortItems() {
     items.forEach(item => container.appendChild(item)); // Append sorted items
 }
 
+function handleClick() {
+    alert("Button clicked!");

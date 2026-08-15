@@ -8,17 +8,20 @@
     color: #243e63;
 }
 
-.h1 {
+h1 {
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 24px;
+    color: red;
+    text-align: center;
 }
 
-.p {
+p {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 body {
@@ -316,6 +319,23 @@ START / CALL TO ACTION ↓
 
 */
 
+.cta {
+    background-color: #ff6347; /* Background color */
+    color: white; /* Text color */
+    padding: 12px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+}
+
+.cta:hover {
+    background-color: #ff4500; /* Change color on hover */
+}
+
+.cta:active {
+    background-color:orangered; /* Darker color when clicked */
+}
 
 
 #start .row {
@@ -333,7 +353,7 @@ FOOTER ↓
 
 footer {
     padding: 96px 32px;
-    background-color: rgb(100, 21, 255);
+    background-color: red;
     margin-bottom: -32px;
     position: relative;
     overflow: hidden;
