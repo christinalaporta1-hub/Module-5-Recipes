@@ -15,7 +15,7 @@ const recipeSearch = document.querySelector("#recipe-search");
 const recipeStatus = document.querySelector("#recipe-status");
 const recipeResults = document.querySelector("#recipe-results");
 
-const apiKey = "3cf5c313812848f8bbf02809f30f6e9d";
+const apiKey = "";
 
 recipeForm.addEventListener("submit", searchRecipes);
 
