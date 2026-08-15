@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -81,6 +81,24 @@
         </header>
     </section>
     <main>
+       <section id="recipes">
+  <div class="container">
+    <h1>Find a Recipe</h1>
+
+    <form id="recipe-form">
+      <input
+        id="recipe-search"
+        type="search"
+        placeholder="Search chicken, salmon, soup..."
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="recipe-status"></p>
+    <div id="recipe-results"></div>
+  </div>
+</section>
         <section id="features">
             <div class="container">
                 <div class="row">
