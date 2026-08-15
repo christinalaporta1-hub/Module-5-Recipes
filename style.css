@@ -308,6 +308,30 @@ TESTIMONIALS ↓
 
 */
 
+#recipe-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+#recipe-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.recipe-card {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img {
+  width: 100%;
+  border-radius: 8px;
+}
 
 #testimonials .row {
     display: flex;
@@ -414,4 +438,36 @@ MOBILE RESPONSIVENESS ↓
     main {
         margin-bottom: 80px;
     }
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-list {
+  margin-left: auto;
+}
+
+header .row,
+main .row {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sort-container {
+  justify-content: center;
+}
+
+.nav-overlay {
+  pointer-events: none;
+}
+
+.nav_logo,
+.nav-link-list {
+  position: relative;
+  z-index: 2;
 }

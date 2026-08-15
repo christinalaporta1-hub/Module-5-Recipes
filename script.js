@@ -35,7 +35,7 @@ const recipeSearch = document.querySelector("#recipe-search");
 const recipeStatus = document.querySelector("#recipe-status");
 const recipeResults = document.querySelector("#recipe-results");
 
-const apiKey = "PASTE_YOUR_API_KEY_HERE";
+const apiKey = "";
 
 recipeForm.addEventListener("submit", searchRecipes);
 
@@ -89,32 +89,4 @@ function renderRecipes(recipes) {
       `
     )
     .join("");
-}
-Open the project with Live Server, search for chicken, and inspect the Console. Expand data, then find the results array. That array is what .map() uses to build each recipe card.
-
-Once that works, add this CSS:
-
-#recipe-form {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-#recipe-results {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-}
-
-.recipe-card {
-  padding: 16px;
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.recipe-card img {
-  width: 100%;
-  border-radius: 8px;
 }
