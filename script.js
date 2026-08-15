@@ -6,23 +6,23 @@ function closeMenu() {
     document.body.classList.remove("menu--open");
 }
 
-async function performSearch() {
-    const query = document.getElementById('search-input').value;
-    const response = await fetch(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${query}&apiKey=3cf5c313812848f8bbf02809f30f6e9d`);
-    const recipes = await response.json();
-    displayRecipes(recipes);
+function sortItems() {
+    const sortValue = document.getElementById('sort-options').value;
+    let items = [...document.querySelectorAll('.item')]; // Assuming your items have a class of 'item'
+
+    if (sortValue === 'az') {
+        items.sort((a, b) => a.textContent.localeCompare(b.textContent));
+    } else if (sortValue === 'za') {
+        items.sort((a, b) => b.textContent.localeCompare(a.textContent));
+    } else if (sortValue === 'newest') {
+        // Assuming items have a data attribute for the date
+        items.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+    } else if (sortValue === 'oldest') {
+        items.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+    }
+
+    const container = document.querySelector('.items-container'); // Your container for the items
+    container.innerHTML = ''; // Clear the container
+    items.forEach(item => container.appendChild(item)); // Append sorted items
 }
 
-function displayRecipes(recipes) {
-    const resultsContainer = document.getElementById('recipe-results');
-    resultsContainer.innerHTML = ""; // Clear previous results
-    recipes.forEach(recipe => {
-        const recipeElement = document.createElement('div');
-        recipeElement.innerHTML = `
-            <h2>${recipe.title}</h2>
-            <img src="${recipe.image}" alt="${recipe.title}">
-            <p>Ingredients: ${recipe.ingredients.join(', ')}</p>
-        `;
-        resultsContainer.appendChild(recipeElement);
-    });
-}

@@ -116,9 +116,35 @@ NAVBAR ↓
     height: 150px;
 }
 
-.sort-options {
-    margin-top: 20px;
-    text-align: center;
+.sort-container {
+    margin: 20px;
+}
+
+.sort-container select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.sort-container {
+    display: flex;
+    align-items: center;
+}
+
+#sort-options {
+    border: 2px solid #FF4500; /* Fire orange color */
+    border-radius: 25px; /* Oval shape */
+    padding: 10px; /* Spacing inside the dropdown */
+    background-color: #FF6347; /* Tomato color as background */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+}
+
+/* Optional: style the options within the dropdown */
+#sort-options option {
+    background-color: #FF6347; /* Same background color */
+    color: white; /* Text color */
 }
 
 

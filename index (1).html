@@ -61,11 +61,16 @@
                 <a class="modal__link modal__link--primary">Sign Up</a>
             </div>
         </div>
-              <div class="sort-options"> <select id="sort-options" onchange="sortRecipes()">
-    <option value="alphabetical">Alphabetical A-Z</option>
-    <option value="newest">Newest</option>
-</select>
-            </div>
+     <div class="sort-container">
+    <label for="sort-options">Sort Recipes by:</label>
+    <select id="sort-options" onchange="sortItems()">
+        <option value="az">Alphabetical A to Z</option>
+        <option value="za">Alphabetical Z to A</option>
+        <option value="newest">Newest to Oldest</option>
+        <option value="oldest">Oldest to Newest</option>
+    </select>
+</div>
+
         <header>
             <div class="container">
                 <div class="row">
@@ -112,6 +117,7 @@
             <div class="container">
                 <div class="row">
                     <h1>Pricing</h1>
+                    <p>Receive exclusive access to our premium recipes and meal planning tools. We have plans for every budget. From a monthly plan all the way up to a daily plan for dinner ideas every night!!</p>
                 </div>
                 
             </div>
