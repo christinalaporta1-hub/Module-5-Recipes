@@ -17,6 +17,15 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
 p {
     font-size: 18px;
     line-height: 1.6;
@@ -120,30 +129,46 @@ NAVBAR ↓
     height: 150px;
 }
 
-.sort-container {
-    margin: 20px;
+.search-form {
+    display: flex;             /* Use Flexbox for alignment */
+    justify-content: center;   /* Center items horizontally */
+    align-items: center;       /* Center items vertically */
+    margin: 20px;             /* Add some margin */
 }
 
-.sort-container select {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+#recipe-search {
+    padding: 12px 20px;       /* Padding for the input */
+    border: 2px solid #ff6347; /* Fire-colored border */
+    border-radius: 20px;      /* Oval shape */
+    font-size: 16px;          /* Font size */
+    outline: none;            /* Remove outline */
+    transition: border-color 0.3s; /* Smooth transition */
 }
 
-.sort-container {
-    display: flex;
-    align-items: center;
+#recipe-search:focus {
+    border-color: #ff4500;    /* Darker fire color when focused */
 }
 
-#sort-options {
-    border: 2px solid #FF4500; /* Fire orange color */
-    border-radius: 25px; /* Oval shape */
-    padding: 10px; /* Spacing inside the dropdown */
-    background-color: #FF6347; /* Tomato color as background */
-    color: white; /* Text color */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer on hover */
+button[type="submit"] {
+    background-color: #ff6347; /* Fire color background */
+    color: white;              /* White text */
+    padding: 12px 20px;       /* Padding */
+    border: none;              /* No border */
+    border-radius: 20px;      /* Oval shape */
+    cursor: pointer;           /* Pointer cursor on hover */
+    font-size: 16px;          /* Font size */
+    margin-left: 10px;        /* Space between input and button */
+    transition: background-color 0.3s; /* Smooth transition */
 }
+
+button[type="submit"]:hover {
+    background-color: #ff4500; /* Change color on hover */
+}
+
+button[type="submit"]:active {
+    background-color: orangered; /* Darker color when clicked */
+}
+
 
 /* Optional: style the options within the dropdown */
 #sort-options option {
@@ -352,7 +377,17 @@ START / CALL TO ACTION ↓
     border-radius: 6px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     font-size: 16px; /* Font size */
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center it horizontally */
+    width: 200px; /* Set a fixed width */
 }
+
+.button-container {
+    text-align: center; /* Center text inside the container */
+}
+
+
+
 
 .cta:hover {
     background-color: #ff4500; /* Change color on hover */
@@ -361,7 +396,6 @@ START / CALL TO ACTION ↓
 .cta:active {
     background-color:orangered; /* Darker color when clicked */
 }
-
 
 #start .row {
     position: relative;
@@ -384,6 +418,41 @@ footer {
     overflow: hidden;
 }
 
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-list {
+  margin-left: auto;
+}
+
+.nav_logo img {
+  display: block;
+}
+
+header .row,
+main .row {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sort-container {
+  justify-content: center;
+}
+
+.nav-overlay {
+  pointer-events: none;
+}
+
+.nav_logo,
+.nav-link-list {
+  position: relative;
+  z-index: 2;
+}
 
 /* 
 
@@ -440,38 +509,3 @@ MOBILE RESPONSIVENESS ↓
     }
 }
 
-.nav-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.nav-link-list {
-  margin-left: auto;
-}
-
-.nav_logo img {
-  display: block;
-}
-
-header .row,
-main .row {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.sort-container {
-  justify-content: center;
-}
-
-.nav-overlay {
-  pointer-events: none;
-}
-
-.nav_logo,
-.nav-link-list {
-  position: relative;
-  z-index: 2;
-}
