@@ -450,6 +450,10 @@ MOBILE RESPONSIVENESS ↓
   margin-left: auto;
 }
 
+.nav_logo img {
+  display: block;
+}
+
 header .row,
 main .row {
   flex-direction: column;
